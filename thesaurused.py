@@ -30,7 +30,7 @@ def usage(message):
 prob_change = 1.0
 prob_antonym = 0.0
 no_lesk = False
-do_hilight = False
+do_highlight = False
 try:
 	opts, args = getopt.getopt(argv[1:], 'p:a:Lh', ['probability=', 'antonym=', 'lesk', 'highlight'])
 except getopt.GetoptError:
@@ -57,7 +57,7 @@ for opt, val in opts:
 	elif opt == '-L':
 		no_lesk = True
 	elif opt == '-h':
-		do_hilight = True
+		do_highlight = True
 
 # Check if those arguments are existing files
 if not len(args) >= 1:
@@ -119,11 +119,11 @@ def main():
 				if not len(word_list) > 0:
 					line_new += word + ' '
 				else:
-					if do_hilight:
+					if do_highlight:
 						if word_mark == 'syn':
-							line_new += hilight(transform_word(random.choice(word_list), pos, word), True, False) + ' '
+							line_new += highlight(transform_word(random.choice(word_list), pos, word), True, False) + ' '
 						elif word_mark == 'ant':
-							line_new += hilight(transform_word(random.choice(word_list), pos, word), False, False) + ' '
+							line_new += highlight(transform_word(random.choice(word_list), pos, word), False, False) + ' '
 						else:
 							line_new += transform_word(random.choice(word_list), pos, word) + ' '
 					else:
@@ -193,7 +193,7 @@ def transform_word(word, pos, word_original):
 	return ' '.join(result)
 
 # Colorizer
-def hilight(string, status, bold):
+def highlight(string, status, bold):
 	attr = list()
 	if status:
 		# green
