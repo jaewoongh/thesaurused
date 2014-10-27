@@ -18,12 +18,12 @@ def usage(message):
 	if message is not None:
 		print message
 		print
-	print 'Usage: ./thesaurused.py [-p|--probability <0..1>] [-a|--antonym <0..1>] [-L|--lesk] [-h|--hilight] <filename>'
+	print 'Usage: ./thesaurused.py [-p|--probability <0..1>] [-a|--antonym <0..1>] [-L|--lesk] [-h|--highlight] <filename>'
 	print
 	print '  -p, --probability   Probability to change available word, between 0 and 1'
 	print '  -a, --antonym       Probability to use antonym instead of synonym, between 0 and 1'
 	print '  -L, --lesk          Turn off lesk algorithm'
-	print '  -h, --hilight       Hilight changed words'
+	print '  -h, --highlight     Highlight changed words'
 	return
 
 # Get command line options and arguments
@@ -32,7 +32,7 @@ prob_antonym = 0.0
 no_lesk = False
 do_hilight = False
 try:
-	opts, args = getopt.getopt(argv[1:], 'p:a:Lh', ['probability=', 'antonym=', 'lesk', 'hilight'])
+	opts, args = getopt.getopt(argv[1:], 'p:a:Lh', ['probability=', 'antonym=', 'lesk', 'highlight'])
 except getopt.GetoptError:
 	usage(None)
 	sys.exit(2)

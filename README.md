@@ -18,17 +18,17 @@ Options:
 	  -p, --probability   Probability to change available word, between 0 and 1
 	  -a, --antonym       Probability to use antonym instead of synonym, between 0 and 1
 	  -L, --lesk          Turn off lesk algorithm
-	  -h, --hilight       Hilight changed words
+	  -h, --hilight       Highlight changed words
 
 Change 80% of possible words, trying using antonym for half of them if possible:
 
 	$ ./thesaurused.py -p 0.8 -a 0.5 sample.txt
 
-Turn off lesk algorithm to give more possibilities of being ridiculous, and hilight result:
+Turn off lesk algorithm to give more possibilities of being ridiculous, and highlight result:
 
 	$ ./thesaurused.py -Lh sample.txt
 
-Hilight colors are green for synonym, red for antonym by default.
+Highlight colors are green for synonym, red for antonym by default.
 
 *Note that since there're simply not much antonyms for words than synonyms, things may not result in expected output.
 
