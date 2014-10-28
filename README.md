@@ -2,9 +2,8 @@ Thesaurused
 ===========
 A code poetry machine
 
-## What is it
-Thesaurused takes text file(s) and replaces possible words into synonyms/antonyms.  
-Initially intended to use existing poems as input.
+## What does this do?
+Thesaurused takes text file(s) and replaces possible words into synonyms/antonyms.
 
 ## Usage
 Basic usage:
@@ -37,3 +36,9 @@ Highlight colors are green for synonym, red for antonym by default.
 
 This project contains copies of [pywsd](https://github.com/alvations/pywsd) and [pattern.en](http://www.clips.ua.ac.be/pages/pattern-en).  
 Please refer to those sites for more information about legal and references.
+
+## As a forgetting device
+
+The project is originally done as a "forgetting device" for the class "To Remember and Forget: Memory and Machine" at ITP, Tisch School Of The Arts, NYU, by [Taeyoon Choi](http://taeyoonchoi.com).
+
+The idea is to slowly change a text a bit by bit, but not entirely at once, so that person could see the text without any clear disturbing feeling. Since the structure of the text is still there and only words change to not completely absurd alternatives, it could effectively mislead the reader if done slowly and steadily.
