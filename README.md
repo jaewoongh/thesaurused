@@ -12,12 +12,12 @@ Basic usage:
 
 Options:
 
-	$ ./thesaurused.py [-p|--probability <0..1>] [-a|--antonym <0..1>] [-L|--lesk] [-h|--hilight] <filename>
+	$ ./thesaurused.py [-p|--probability <0..1>] [-a|--antonym <0..1>] [-L|--lesk] [-h|--highlight] <filename>
 
 	  -p, --probability   Probability to change available word, between 0 and 1
 	  -a, --antonym       Probability to use antonym instead of synonym, between 0 and 1
 	  -L, --lesk          Turn off lesk algorithm
-	  -h, --hilight       Highlight changed words
+	  -h, --highlight       Highlight changed words
 
 Change 80% of possible words, trying using antonym for half of them if possible:
 
